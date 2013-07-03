@@ -1,0 +1,30 @@
+main.o: main.cpp common.hpp ifdef.hpp bitboard.hpp square.hpp \
+ overloadEnumOperators.hpp color.hpp init.hpp position.hpp piece.hpp \
+ hand.hpp pieceScore.hpp score.hpp usi.hpp move.hpp
+bitboard.o: bitboard.cpp common.hpp ifdef.hpp bitboard.hpp square.hpp \
+ overloadEnumOperators.hpp color.hpp
+init.o: init.cpp common.hpp ifdef.hpp init.hpp bitboard.hpp square.hpp \
+ overloadEnumOperators.hpp color.hpp mt64bit.hpp evaluate.hpp piece.hpp \
+ pieceScore.hpp score.hpp
+mt64bit.o: mt64bit.cpp mt64bit.hpp common.hpp ifdef.hpp
+position.o: position.cpp position.hpp piece.hpp common.hpp ifdef.hpp \
+ overloadEnumOperators.hpp color.hpp hand.hpp bitboard.hpp square.hpp \
+ pieceScore.hpp score.hpp move.hpp mt64bit.hpp generateMoves.hpp
+move.o: move.cpp move.hpp common.hpp ifdef.hpp square.hpp \
+ overloadEnumOperators.hpp color.hpp piece.hpp position.hpp hand.hpp \
+ bitboard.hpp pieceScore.hpp score.hpp
+square.o: square.cpp square.hpp overloadEnumOperators.hpp common.hpp \
+ ifdef.hpp color.hpp
+usi.o: usi.cpp usi.hpp common.hpp ifdef.hpp move.hpp square.hpp \
+ overloadEnumOperators.hpp color.hpp piece.hpp position.hpp hand.hpp \
+ bitboard.hpp pieceScore.hpp score.hpp generateMoves.hpp
+generateMoves.o: generateMoves.cpp generateMoves.hpp common.hpp ifdef.hpp \
+ piece.hpp overloadEnumOperators.hpp color.hpp move.hpp square.hpp \
+ position.hpp hand.hpp bitboard.hpp pieceScore.hpp score.hpp usi.hpp
+evaluate.o: evaluate.cpp evaluate.hpp overloadEnumOperators.hpp \
+ common.hpp ifdef.hpp square.hpp color.hpp piece.hpp pieceScore.hpp \
+ score.hpp position.hpp hand.hpp bitboard.hpp
+hand.o: hand.cpp common.hpp ifdef.hpp piece.hpp overloadEnumOperators.hpp \
+ color.hpp hand.hpp
+pieceScore.o: pieceScore.cpp piece.hpp common.hpp ifdef.hpp \
+ overloadEnumOperators.hpp color.hpp pieceScore.hpp score.hpp
