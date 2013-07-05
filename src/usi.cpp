@@ -292,10 +292,10 @@ void doUSICommandLoop() {
 	std::string token;
 
 	do {
+		cmd = "quit";
 		getline(std::cin, cmd);
 		std::istringstream ssCmd(cmd);
 
-		token = "quit";
 		ssCmd >> std::skipws >> token;
 
 		if(token == "usi") {
