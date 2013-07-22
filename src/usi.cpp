@@ -293,6 +293,7 @@ void doUSICommandLoop() {
 
 	do {
 		cmd = "quit";
+		token = "";
 		getline(std::cin, cmd);
 		std::istringstream ssCmd(cmd);
 
@@ -330,7 +331,7 @@ void doUSICommandLoop() {
 			break;
 		}
 		else {
-			std::cout << "unknown command: " << cmd << std::endl;
+//			std::cout << "unknown command: " << cmd << std::endl;
 		}
 	} while(true);
 }
