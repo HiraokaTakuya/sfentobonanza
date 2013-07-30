@@ -1503,9 +1503,6 @@ silver_drop_end:
 						}
 					}
 
-					// 玉の前方に移動する場合、成で詰まなかったら不成でも詰まないので、ここで省く。
-					// sakurapyon の作者が言ってたので実装。
-					toBB &= ~inFrontMask(Them, makeRank(ksq));
 					while(toBB.isNot0()) {
 						const Square to = toBB.firstOneFromI9();
 						if(unDropCheckIsSupported(US, to)) {
